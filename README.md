@@ -1,10 +1,8 @@
-# Create development certificates the easy way!
+# Create development certificate
 
 If you're a web developer and need to test your websites locally on HTTPs, you probably don't want to buy an SSL certificate for this.
 
-Instead, you want to **generate your own certificates**! 💪
-
-However, working with the `openssl` CLI can be intimidating. Options are hard to remember. So I've put together these scripts and instructions to make my life, and yours, easier!
+Instead, you want to **generate your own certificates**!
 
 ## Generate your own Certificate Authority
 
@@ -63,9 +61,9 @@ You only need to perform this step **once** for each browser, whatever the numbe
 - click "OK"
 
 ### Safari on macOS
-
-- sudo security add-trusted-cert -d -r trustRoot -k "/Library/Keychains/System.keychain" ca.crt
-- 
+```
+sudo security add-trusted-cert -d -r trustRoot -k "/Library/Keychains/System.keychain" ca.crt
+```
 ### Safari, Chrome & Firefox on iOS
 
 - Download your certificate:
@@ -101,9 +99,9 @@ You only need to perform this step **once** for each browser, whatever the numbe
 If you need to create certificates for other domains, just run `create-certificate.sh` again.
 **No need to create or import the CA again!**
 
-Enjoy! 👋
 
 ## Credits
 
 These scripts have been created from the steps highlighted in [this StackOverflow answer](https://stackoverflow.com/a/60516812/759866) by [@entrity](https://github.com/entrity).
-Scripts from: Ben Morel: https://github.com/BenMorel/dev-certificates
+
+Scripts from: Ben Morel https://github.com/BenMorel/dev-certificates
